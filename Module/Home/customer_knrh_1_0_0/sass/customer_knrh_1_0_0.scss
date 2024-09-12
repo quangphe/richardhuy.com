@@ -1,0 +1,106 @@
+.customer_knrh_1_0_0 {
+    &__title {
+        font-family: var(--primary-font);
+        color: #2e61a4;
+        text-align: center;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    &__line {
+        border: 1px solid #2e61a4;
+        width: 12%;
+        display: block;
+        margin: 20px auto;
+    }
+
+    &__slideCustomer {
+        position: relative;
+        overflow: hidden;
+        height: 497px;
+
+        &:hover .customer_knrh_1_0_0__preWrapper {
+            animation-play-state: paused;
+        }
+
+        &:hover .customer_knrh_1_0_0__wrapper {
+            animation-play-state: paused;
+        }
+    }
+
+    &__preWrapper {
+        position: relative;
+        width: 100%;
+        transform: translateX(0%);
+        animation: scroll1 13s linear infinite;
+        will-change: transform;
+    }
+
+    &__wrapper {
+        position: absolute;
+        white-space: nowrap;
+        transform: translateX(0%) translateZ(0);
+        animation: scroll2 13s linear infinite;
+        will-change: transform;
+    }
+
+    a {
+        img {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    @media (max-width: 430px) {
+        &__title {
+            padding: 0 25px;
+            font-size: 1rem;
+
+            br {
+                display: none;
+            }
+        }
+
+        &__line {
+            width: 30%;
+        }
+
+        &__slideCustomer {
+            height: 380px;
+        }
+    }
+
+    @media (max-width: 390px) {
+        &__title {
+            padding: 0 35px;
+        }
+    }
+
+    @media (max-width: 320px) {
+        &__title {
+            padding: 0 30px;
+        }
+    }
+}
+
+@keyframes scroll1 {
+    0% {
+        transform: translateX(-0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes scroll2 {
+    0% {
+        transform: translateX(0%) translateZ(0);
+    }
+
+    100% {
+        transform: translateX(-100%) translateZ(0);
+    }
+}

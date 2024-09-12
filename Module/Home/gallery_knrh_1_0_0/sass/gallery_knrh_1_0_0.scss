@@ -1,0 +1,22 @@
+.gallery_knrh_1_0_0 {
+    &__box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__pic {
+        width: 25%;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    @media (max-width: 430px) {
+        &__pic {
+            display: none;
+        }
+    }
+}
