@@ -1,4 +1,6 @@
 .work_knrh_1_0_0 {
+    padding: 20px 0;
+
     &__box {
         display: flex;
     }
@@ -42,6 +44,14 @@
         padding: 8px 25px;
         color: #2e61a4;
         font-size: 1rem;
+        transition: all .3s linear;
+
+        &:hover {
+            background: unset;
+            border: 1px solid #fff;
+            color: #fff;
+            transition: all .3s linear;
+        }
     }
 
     &__boxRight {
@@ -95,6 +105,12 @@
         &__btn {
             background: unset;
             border: 1px solid #2e61a4;
+
+            &:hover {
+                background: unset;
+                color: #2e61a4;
+                border: 1px solid #2e61a4;
+            }
         }
 
         &__boxRight {

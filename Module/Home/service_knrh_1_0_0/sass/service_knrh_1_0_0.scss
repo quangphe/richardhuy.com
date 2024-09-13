@@ -1,10 +1,21 @@
 .service_knrh_1_0_0 {
+    padding: 20px 0;
+
     &__box {
         display: flex;
     }
 
     &__item {
         position: relative;
+        overflow: hidden;
+
+        &.item1 {
+            border-radius: 50px 0 0 50px;
+        }
+
+        &.item3 {
+            border-radius: 0 50px 50px 0;
+        }
     }
 
     &__pic {
@@ -12,6 +23,11 @@
             width: 100%;
             height: auto;
             display: block;
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.04);
+            }
         }
 
         &.pic1 {
@@ -44,6 +60,10 @@
                     font-family: var(--primary-font);
                     color: #fff;
                     font-size: 1.1rem;
+
+                    &:hover {
+                        color: #db7f27;
+                    }
                 }
             }
         }
