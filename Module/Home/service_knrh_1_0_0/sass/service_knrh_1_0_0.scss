@@ -1,5 +1,5 @@
 .service_knrh_1_0_0 {
-    padding: 20px 0;
+    padding: 10px 0 50px;
 
     &__box {
         display: flex;
@@ -27,6 +27,7 @@
 
             &:hover {
                 transform: scale(1.04);
+                opacity: .8;
             }
         }
 
@@ -54,7 +55,7 @@
 
             li {
                 list-style: none;
-                margin-bottom: 15px;
+                margin-bottom: 10px;
 
                 a {
                     font-family: var(--primary-font);
@@ -69,20 +70,7 @@
         }
     }
 
-    &__title {
-        font-family: var(--primary-font);
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 2.3rem;
-        line-height: 54px;
-        margin-bottom: 18px;
-    }
-
     @media (max-width: 1024px) {
-        &__title {
-            font-size: 2rem;
-            line-height: 48px;
-        }
 
         &__boxList {
             left: 20px;
@@ -90,8 +78,10 @@
 
             ul {
                 li {
+                    margin-bottom: 8px;
+
                     a {
-                        font-size: 1rem;
+                        font-size: 0.9rem;
                     }
                 }
             }
@@ -99,15 +89,11 @@
     }
 
     @media (max-width: 912px) {
-        &__title {
-            font-size: 1.7rem;
-            line-height: 38px;
-        }
 
         &__boxList {
             ul {
                 li {
-                    margin-bottom: 8px;
+                    margin-bottom: 0px;
 
                     a {
                         font-size: 0.8rem;
@@ -126,6 +112,17 @@
             flex-direction: column;
         }
 
+        &__item {
+
+            &.item1 {
+                border-radius: 0;
+            }
+
+            &.item3 {
+                border-radius: 0;
+            }
+        }
+
         &__pic {
 
             &.pic1 {
@@ -141,11 +138,6 @@
             }
         }
 
-        &__title {
-            font-size: 2rem;
-            line-height: 45px;
-        }
-
         &__boxList {
             ul {
                 li {
@@ -154,6 +146,16 @@
                     a {
                         font-size: 1rem;
                     }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 375px) {
+        &__boxList {
+            ul {
+                li {
+                    margin-bottom: 10px;
                 }
             }
         }

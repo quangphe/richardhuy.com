@@ -1,0 +1,117 @@
+.video_knrh_1_0_0 {
+    background: url(../images/bg-video.jpg) center 0 no-repeat;
+    max-width: 1920px;
+    min-height: 760px;
+    padding: 50px 0;
+    margin: 0 0 40px;
+
+    &__titleVideo {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: var(--primary-font);
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.6rem;
+        margin-left: 30px;
+    }
+
+    &__play {
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &__sliderVideo {
+        background: #112744ad;
+        border-radius: 20px;
+        margin-top: 310px;
+        padding: 10px 50px 20px 50px;
+    }
+
+    &__pic {
+        padding: 20px 10px 10px;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &__titleChild {
+        font-family: var(--primary-font);
+        color: #fff;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .controls li {
+        top: 75%;
+    }
+
+    .controls .prev {
+        left: 26px;
+    }
+
+    .controls .next {
+        right: 26px;
+    }
+
+    @media (max-width: 1280px) {
+        max-width: 1280px;
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 1024px;
+        min-height: 590px;
+
+        &__sliderVideo {
+            margin-top: 184px;
+        }
+    }
+
+    @media (max-width: 430px) {
+        background: url(../images/bg-video-mb.jpg) center 0 no-repeat;
+        max-width: 430px;
+        min-height: 285px;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 20px;
+
+        .container {
+            padding: 0;
+        }
+
+        &__titleVideo {
+            background: #2f2f2fbf;
+            padding: 10px 20px;
+        }
+
+        &__title {
+            text-transform: unset;
+            font-weight: 400;
+            font-size: 1rem;
+            margin-left: 22px;
+        }
+
+        &__play {
+            width: 35px;
+        }
+
+        &__sliderVideo {
+            display: none;
+        }
+    }
+
+    @media (max-width: 320px) {
+        &__title {
+            font-size: 0.8rem;
+        }
+    }
+}
