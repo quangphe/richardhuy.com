@@ -1,26 +1,26 @@
 const eventPC = (data) => {
     const header_knrh_1_0_0_elmHover = document.querySelectorAll('.header_knrh_1_0_0__navItem a');
     const header_knrh_1_0_0_elmBg = document.querySelector('.header_knrh_1_0_0__bg');
-    for(let i = 0; i < header_knrh_1_0_0_elmHover.length; i++){
+    for (let i = 0; i < header_knrh_1_0_0_elmHover.length; i++) {
         header_knrh_1_0_0_elmHover[i].addEventListener('mouseover', () => {
-            for(let i = 0; i < header_knrh_1_0_0_elmHover.length; i++){
+            for (let i = 0; i < header_knrh_1_0_0_elmHover.length; i++) {
                 const header_knrh_1_0_0_elmId = header_knrh_1_0_0_elmHover[i].getAttribute('data-id');
-                if(header_knrh_1_0_0_elmId !== null){
+                if (header_knrh_1_0_0_elmId !== null) {
                     document.getElementById(header_knrh_1_0_0_elmId).innerHTML = '';
                 }
             }
             const header_knrh_1_0_0_elmId = header_knrh_1_0_0_elmHover[i].getAttribute('data-id');
             const innerData = data.filter(item => item.label === header_knrh_1_0_0_elmId);
-            if(innerData.length > 0){
+            if (innerData.length > 0) {
                 document.getElementById(header_knrh_1_0_0_elmId).innerHTML = innerData[0].layout;
                 header_knrh_1_0_0_elmBg.style.display = 'block';
             }
         })
     }
     header_knrh_1_0_0_elmBg.addEventListener('mouseover', () => {
-        for(let i = 0; i < header_knrh_1_0_0_elmHover.length; i++){
+        for (let i = 0; i < header_knrh_1_0_0_elmHover.length; i++) {
             const header_knrh_1_0_0_elmId = header_knrh_1_0_0_elmHover[i].getAttribute('data-id');
-            if(header_knrh_1_0_0_elmId !== null){
+            if (header_knrh_1_0_0_elmId !== null) {
                 document.getElementById(header_knrh_1_0_0_elmId).innerHTML = '';
                 header_knrh_1_0_0_elmBg.style.display = 'none';
             }
@@ -31,17 +31,17 @@ const eventPC = (data) => {
 const eventMB = (data) => {
     const elmClick = document.querySelectorAll('.header_knrh_1_0_0__navItem a');
     const header_knrh_1_0_0_elmBg = document.querySelector('.header_knrh_1_0_0__bg');
-    for(let i = 0; i < elmClick.length; i++){
+    for (let i = 0; i < elmClick.length; i++) {
         elmClick[i].addEventListener('click', () => {
-            for(let i = 0; i < elmClick.length; i++){
+            for (let i = 0; i < elmClick.length; i++) {
                 const header_knrh_1_0_0_elmId = elmClick[i].getAttribute('data-id');
-                if(header_knrh_1_0_0_elmId !== null){
+                if (header_knrh_1_0_0_elmId !== null) {
                     document.getElementById(header_knrh_1_0_0_elmId).innerHTML = '';
                 }
             }
             const header_knrh_1_0_0_elmId = elmClick[i].getAttribute('data-id');
             const innerData = data.filter(item => item.label === header_knrh_1_0_0_elmId);
-            if(innerData.length > 0){
+            if (innerData.length > 0) {
                 document.getElementById(header_knrh_1_0_0_elmId).innerHTML = innerData[0].layout;
             }
             newFuncShowSub();
@@ -49,31 +49,31 @@ const eventMB = (data) => {
         })
     }
     header_knrh_1_0_0_elmBg.addEventListener('click', () => {
-        for(let i = 0; i < elmClick.length; i++){
+        for (let i = 0; i < elmClick.length; i++) {
             const header_knrh_1_0_0_elmId = elmClick[i].getAttribute('data-id');
-            if(header_knrh_1_0_0_elmId !== null){
+            if (header_knrh_1_0_0_elmId !== null) {
                 document.getElementById(header_knrh_1_0_0_elmId).innerHTML = '';
                 header_knrh_1_0_0_elmBg.style.display = 'none';
                 document.querySelector('.header_knrh_1_0_0__bottom').classList.remove('show');
                 document.body.classList.remove('fixed-body');
                 const elmDown = document.querySelectorAll('.header_knrh_1_0_0__dropdown');
-                for(let i = 0; i < elmDown.length; i++){
+                for (let i = 0; i < elmDown.length; i++) {
                     elmDown[i].classList.remove('show');
-                } 
+                }
             }
         }
     })
-    
+
     document.querySelector('.header_knrh_1_0_0__button').addEventListener('click', () => {
         document.querySelector('.header_knrh_1_0_0__bottom').classList.add('show');
         header_knrh_1_0_0_elmBg.style.display = 'block';
         document.body.classList.add('fixed-body')
         const elmClickDown = document.querySelectorAll('.header_knrh_1_0_0__bottom.show .header_knrh_1_0_0__navItem a');
-        for(let i = 0; i < elmClickDown.length; i++){
+        for (let i = 0; i < elmClickDown.length; i++) {
             elmClickDown[i].addEventListener('click', () => {
                 const idElm = elmClickDown[i].getAttribute('data-id')
                 const elmById = document.querySelector(`#${idElm}`)
-                if(elmById){
+                if (elmById) {
                     elmById.classList.add('show');
                     const elmClickBack = document.querySelector('.header_knrh_1_0_0__bottom.show .header_knrh_1_0_0__dropdown.show .header_knrh_1_0_0__back');
                     elmClickBack.addEventListener('click', () => {
@@ -88,9 +88,9 @@ const eventMB = (data) => {
         header_knrh_1_0_0_elmBg.style.display = 'none';
         document.body.classList.remove('fixed-body');
         const elmDown = document.querySelectorAll('.header_knrh_1_0_0__dropdown');
-        for(let i = 0; i < elmDown.length; i++){
+        for (let i = 0; i < elmDown.length; i++) {
             elmDown[i].classList.remove('show');
-        } 
+        }
     });
     const newFuncShowSub = () => {
         const elmLocationSub = document.querySelectorAll('.header_knrh_1_0_0__dropdownMain .link-view');
@@ -115,13 +115,13 @@ const eventMB = (data) => {
     }
     const reloadPage = () => {
         const elms = document.querySelectorAll('.click-reload');
-        for (let i = 0; i < elms.length; i++){
+        for (let i = 0; i < elms.length; i++) {
             elms[i].addEventListener('click', () => {
                 header_knrh_1_0_0_elmBg.style.display = 'none';
                 document.querySelector('.header_knrh_1_0_0__bottom').classList.remove('show');
                 document.body.classList.remove('fixed-body');
                 const elmDown = document.querySelectorAll('.header_knrh_1_0_0__dropdown');
-                for(let i = 0; i < elmDown.length; i++){
+                for (let i = 0; i < elmDown.length; i++) {
                     elmDown[i].classList.remove('show');
                 }
             })
