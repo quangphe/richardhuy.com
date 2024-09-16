@@ -1,4 +1,6 @@
 .collaborate_knrh_1_0_0 {
+    padding: 40px 0 0 0;
+
     &__title {
         font-family: var(--primary-font);
         text-align: center;
@@ -8,6 +10,7 @@
         font-size: 1.4rem;
         line-height: 28px;
     }
+
     &__logo {
         width: 230px;
         display: block;
@@ -19,49 +22,59 @@
             display: block;
         }
     }
+
     &__text {
         font-family: var(--primary-font);
         text-align: center;
         font-size: 1rem;
         padding: 0 400px;
     }
+
     &__boxPic {
         display: flex;
         margin-top: 40px;
     }
+
     &__pic {
         width: 100%;
+
         img {
             width: 100%;
             height: auto;
             display: block;
         }
     }
+
     @media (max-width: 1280px) {
         &__text {
             padding: 0 200px;
         }
     }
+
     @media (max-width: 1024px) {
         &__text {
             padding: 0 100px;
         }
     }
+
     @media (max-width: 912px) {
         &__text {
             padding: 0 60px;
         }
     }
+
     @media (max-width: 430px) {
         &__title {
             font-size: 1.2rem;
             line-height: 26px;
             padding: 0 10px;
         }
+
         &__logo {
             width: 200px;
             margin: 26px auto;
         }
+
         &__text {
             padding: 0 20px;
             text-align: justify;
