@@ -1,0 +1,112 @@
+.footer_knrh_1_0_0 {
+    background: #234E88;
+    padding: 30px 0;
+    &__box {
+        display: flex;
+    }
+    &__boxLeft,
+    &__boxRight {
+        width: 30%;
+        padding: 0 20px;
+    }
+    &__boxMid {
+        width: 40%;
+    }
+    &__logo {
+        width: 250px;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    &__item {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    &__icon {
+        margin-right: 10px;
+        width: 25px;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    &__text {
+        font-family: var(--primary-font);
+        color: #fff;
+        font-size: 1rem;
+        line-height: 25px;
+
+        span {
+            color: #FEC465;
+        }
+
+        ul {
+            padding-left: 5px;
+            margin: 8px 0;
+        }
+    }
+    &__boxRight {
+        ul {
+            padding-left: 5px;
+            margin: 0 0 20px 0;
+            li {
+                font-family: var(--primary-font);
+                color: #FEC465;
+                font-size: 1rem;
+
+                a {
+                    color: #FEC465;
+                }
+            }
+        }
+    }
+    &__social {
+        a {
+            margin: 0 10px;
+
+            img {
+                &:hover {
+                    opacity: .7;
+                    transition: all .3s linear;
+                }
+            }
+        }
+    }
+    @media (max-width: 912px) {
+        &__logo {
+            width: 100%;
+        }
+        &__social a {
+            margin: 0 3px;
+        }
+    }
+    @media (max-width: 600px) {
+        &__box {
+            flex-direction: column;
+        }
+        &__boxLeft,
+        &__boxMid,
+        &__boxRight {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+        &__logo {
+            border-bottom: 1px solid #fff;
+        }
+    }
+    @media (max-width: 390px) {
+        &__text {
+            font-size: 0.9rem;
+        }
+        &__boxRight {
+            ul {
+                li {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}

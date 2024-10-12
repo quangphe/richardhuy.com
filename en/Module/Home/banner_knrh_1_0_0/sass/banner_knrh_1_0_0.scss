@@ -1,0 +1,126 @@
+.banner_knrh_1_0_0 {
+  font-family: var(--primary-font);
+
+  .container-full {
+    margin: 0 100px;
+  }
+
+  &__banner {
+    background: url('../images/banner.jpg') center 0 no-repeat;
+    // background: url(../images/banner-v2.webp) center 0 no-repeat;
+    background-size: 1920px;
+    min-height: 682px;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+
+  &__text {
+    width: 52%;
+    color: #fff;
+    text-align: justify;
+    margin-left: auto;
+
+    ul {
+      li {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  @media (max-width: 1690px) {
+    &__banner {
+      background-size: 1690px;
+      min-height: 600px;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    &__banner {
+      background-size: 1440px;
+      min-height: 512px;
+      padding-top: 16px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .container-full {
+      margin: 0 65px;
+    }
+
+    &__banner {
+      background-size: 1200px;
+      min-height: 426px;
+    }
+
+    &__text {
+      ul {
+        li {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__banner {
+      background-size: 1024px;
+      min-height: 363px;
+    }
+  }
+
+  @media (max-width: 912px) {
+    .container-full {
+      margin: 0 25px;
+    }
+
+    &__banner {
+      background-size: 1200px;
+      min-height: 426px;
+    }
+
+    &__text {
+      width: 60%;
+
+      ul {
+        li {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .container-full {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &__banner {
+      background: url('../images/banner-mb.jpg') center 0 no-repeat;
+      background-size: 500px;
+      min-height: 800px;
+      padding-bottom: 30px;
+    }
+
+    &__text {
+      display: none;
+    }
+  }
+
+  @media (max-width: 390px) {
+    &__banner {
+      background-size: 390px;
+      min-height: 624px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    &__banner {
+      background-size: 320px;
+      min-height: 512px;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video_knrh_1_0_0</title>
+    <link rel="stylesheet" href="https://huudinh.github.io/assets/sass/lib.min.css">
+    <link rel="stylesheet" href="../../../assets/sass/custom.min.css">
+    <link rel="stylesheet" href="sass/video_knrh_1_0_0.min.css">
+    <script src="https://huudinh.github.io/assets/js/module.min.js"></script>
+</head>
+
+<body>
+    <section class="video_knrh_1_0_0 fadeInUp load">
+        <div class="container">
+            <div class="video_knrh_1_0_0__titleVideo modal-btn modal-clip" data-video="" data-modal="modal-clip">
+                <div class="video_knrh_1_0_0__play">
+                    <img width="43" height="43" src="images/play.png" alt="">
+                </div>
+                <div class="video_knrh_1_0_0__title">
+                    Tiến sĩ Richard Huy trao đổi <br> về phẫu thuật hàm mặt
+                </div>
+            </div>
+            <div class="video_knrh_1_0_0__sliderVideo">
+                <div class="video_knrh_1_0_0__box">
+                    <div class="video_knrh_1_0_0__item modal-btn modal-clip" data-video="" data-modal="modal-clip">
+                        <div class="video_knrh_1_0_0__pic">
+                            <img width="221" height="145" src="images/thumb-video.jpg" alt="">
+                        </div>
+                        <div class="video_knrh_1_0_0__titleChild">
+                            Tiến sĩ Richard Huy trao đổi về phẫu thuật hàm mặt
+                        </div>
+                    </div>
+                    <div class="video_knrh_1_0_0__item modal-btn modal-clip" data-video="" data-modal="modal-clip">
+                        <div class="video_knrh_1_0_0__pic">
+                            <img width="221" height="145" src="images/thumb-video.jpg" alt="">
+                        </div>
+                        <div class="video_knrh_1_0_0__titleChild">
+                            Tiến sĩ Richard Huy trao đổi về phẫu thuật hàm mặt
+                        </div>
+                    </div>
+                    <div class="video_knrh_1_0_0__item modal-btn modal-clip" data-video="" data-modal="modal-clip">
+                        <div class="video_knrh_1_0_0__pic">
+                            <img width="221" height="145" src="images/thumb-video.jpg" alt="">
+                        </div>
+                        <div class="video_knrh_1_0_0__titleChild">
+                            Tiến sĩ Richard Huy trao đổi về phẫu thuật hàm mặt
+                        </div>
+                    </div>
+                    <div class="video_knrh_1_0_0__item modal-btn modal-clip" data-video="" data-modal="modal-clip">
+                        <div class="video_knrh_1_0_0__pic">
+                            <img width="221" height="145" src="images/thumb-video.jpg" alt="">
+                        </div>
+                        <div class="video_knrh_1_0_0__titleChild">
+                            Tiến sĩ Richard Huy trao đổi về phẫu thuật hàm mặt
+                        </div>
+                    </div>
+                    <div class="video_knrh_1_0_0__item modal-btn modal-clip" data-video="" data-modal="modal-clip">
+                        <div class="video_knrh_1_0_0__pic">
+                            <img width="221" height="145" src="images/thumb-video.jpg" alt="">
+                        </div>
+                        <div class="video_knrh_1_0_0__titleChild">
+                            Tiến sĩ Richard Huy trao đổi về phẫu thuật hàm mặt
+                        </div>
+                    </div>
+                </div>
+                <ul class="controls" id="slider-nav">
+                    <li class="prev">
+                        <span aria-label="Previous">
+                            <img width="11" height="21" src="images/icon-prev.png" alt="">
+                        </span>
+                    </li>
+                    <li class="next">
+                        <span aria-label="Next">
+                            <img width="11" height="21" src="images/icon-next.png" alt="">
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script src="https://huudinh.github.io/assets/js/lib.min.js"></script>
+<script src="https://huudinh.github.io/assets/js/tiny-slider.min.js"></script>
+<script>
+    var slider = tns({
+        container: ".video_knrh_1_0_0__box",
+        items: 4,
+        slideBy: "page",
+        autoplay: false,
+        autoplayButtonOutput: false,
+        mouseDrag: true,
+        lazyload: true,
+        lazyloadSelector: ".tns-lazy",
+        autoHeight: true,
+        nav: false,
+        navPosition: "bottom",
+        controlsContainer: '#slider-nav',
+        responsive: {
+            430: {
+                items: 1,
+            },
+            768: {
+                items: 3,
+            },
+            1024: {
+                items: 4,
+            }
+        },
+    });
+</script>
+
+</html>
