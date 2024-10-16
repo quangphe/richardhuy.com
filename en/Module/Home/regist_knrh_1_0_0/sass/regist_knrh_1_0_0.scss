@@ -1,0 +1,212 @@
+.regist_knrh_1_0_0 {
+    padding: 0 0 25px;
+
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__boxLeft,
+    &__boxRight {
+        width: 50%;
+    }
+
+    &__boxLeft {
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &__boxRight {
+        padding: 0 50px;
+    }
+
+    &__title {
+        font-family: var(--primary-font);
+        text-align: center;
+        font-weight: 600;
+        font-style: italic;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        margin-bottom: 10px;
+        text-align: center;
+
+        input,
+        select {
+            width: 80%;
+            height: 40px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #b5b5b5;
+            padding: 5px 10px;
+
+            &::placeholder {
+                color: #000;
+                opacity: 1;
+            }
+        }
+
+        select:not([size]) {
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+    }
+
+    &__boxBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    &__reg {
+        text-align: center;
+
+        input {
+            font-family: var(--primary-font);
+            color: #fff;
+            background: #F36E22;
+            border: 1px solid #F36E22;
+            border: none;
+            outline: none;
+            padding: 14px 46px;
+            margin: 0 10px;
+            font-weight: 400;
+            transition: all .2s linear;
+            cursor: pointer;
+
+            &:hover {
+                background: #dd6b29;
+                border-color: transparent;
+            }
+
+        }
+    }
+
+    &__call {
+        border: 1px solid #000;
+        padding: 4px 55px;
+        margin: 0 10px;
+        font-size: 0.9rem;
+        transition: all .2s linear;
+        text-align: center;
+
+        &:hover {
+            background: #AA824A;
+            border-color: transparent;
+
+            a {
+                color: #fff;
+            }
+        }
+
+        a {
+            font-family: var(--primary-font);
+
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        &__reg {
+            input {
+                padding: 14px 26px;
+            }
+        }
+
+        &__call {
+            padding: 4px 35px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__box {
+            align-items: flex-start;
+        }
+
+        &__boxRight {
+            padding: 0 5px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 0 0 20px;
+
+        &__boxLeft {
+            display: none;
+        }
+
+        &__boxRight {
+            width: 100%;
+            padding: 0;
+        }
+
+        &__item {
+
+            input,
+            select {
+                width: 95%;
+            }
+        }
+    }
+
+    @media (max-width: 360px) {
+        &__call {
+            padding: 4px 18px;
+        }
+
+        &__reg {
+            input {
+                padding: 14px 18px;
+            }
+        }
+    }
+
+    @media (max-width: 280px) {
+        &__call {
+            padding: 4px 6px;
+        }
+
+        &__reg {
+            input {
+                padding: 14px 6px;
+            }
+        }
+    }
+
+    .form-group.invalid input,
+    .form-group.invalid select {
+        border: 1px solid red
+    }
+
+    .form-group.invalid .form-message {
+        color: red;
+        margin-left: 0;
+        padding: 5px 0 0 10px;
+        font-size: 13px;
+        text-align: left;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    @media (max-width:414px) {
+        .form-group.invalid .form-message {
+            width: 90%;
+        }
+    }
+}

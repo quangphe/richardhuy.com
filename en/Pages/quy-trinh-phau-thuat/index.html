@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closed Surgical Procedure With Dr. Richard Huy</title>
+    <link rel="stylesheet" href="https://richardhuy.com/css/lib/lib.min.css">
+    <link rel="stylesheet" href="media/sass/main.min.css">
+</head>
+
+<body>
+    <section class="screen1">
+        <div class="container">
+            <div class="screen1__boxText">
+                <div class="screen1__title">
+                    <picture>
+                        <source media="(min-width: 600px)" width="602" height="97" srcset="media/images/t1-tt.png">
+                        <img width="324" height="123" src="media/images/t1-tt-mb.png" alt="">
+                    </picture>
+                </div>
+                <div class="screen1__text">
+                    At Kangnam Aesthetic Hospital, every surgery is performed in a sterile environment, strictly adhering to the standards of the Ministry of Health, ensuring absolute safety for clients. Dr. Richard Huy accompanies clients throughout the entire surgical process, from the consultation and examination to performing the surgery.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="screen2">
+        <div class="container">
+            <div class="screen2__box">
+                <div class="screen2__boxLeft">
+                    <div class="screen2__step active" data-index="0">
+                        STEP 1
+                    </div>
+                    <div class="screen2__step" data-index="1">
+                        STEP 2
+                    </div>
+                    <div class="screen2__step" data-index="2">
+                        STEP 3
+                    </div>
+                    <div class="screen2__step" data-index="3">
+                        STEP 4
+                    </div>
+                    <div class="screen2__step" data-index="4">
+                        STEP 5
+                    </div>
+                </div>
+                <div class="screen2__boxRight">
+                    <div class="screen2__item">
+                        <div class="screen2__boxText">
+                            <div class="screen2__title" id="screen2__title">
+                                Dr. Richard Huy's Examination and Consultation
+                            </div>
+                            <div class="screen2__text" id="screen2__text">
+                                Dr. Richard Huy conducts a thorough examination and provides a comprehensive evaluation of each client’s condition. He works with the client to analyze and offer the most optimal solutions, addressing any concerns to ensure they feel fully confident before making a decision. Finally, a personalized surgical plan is created, tailored to each client.
+                            </div>
+                        </div>
+                        <div class="screen2__pic" id="screen2__pic">
+                            <img width="561" height="328" src="media/images/t2-img1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script src="https://richardhuy.com/css/landing/option.min.js?v14"></script>
+<script src="https://richardhuy.com/css/lib/js_v2.min.js?v1"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const data = [
+            {
+                title: 'Dr. Richard Huy’s Examination and Consultation',
+                text: 'Dr. Richard Huy conducts a thorough examination and provides a comprehensive evaluation of each client’s condition. He works with the client to analyze and offer the most optimal solutions, addressing any concerns to ensure they feel fully confident before making a decision. Finally, a personalized surgical plan is created, tailored to each client.',
+                img: '/cp/quy-trinh-phau-thuat/media/images/t2-img1.jpg',
+            },
+            {
+                title: 'General Health Check',
+                text: 'Before undergoing surgery, clients undergo comprehensive tests including blood tests, electrocardiograms, and other necessary examinations to ensure their health is in the most stable condition. Additionally, Dr. Richard Huy carefully assesses any potential risks and takes preventive measures to ensure the surgery is safe and effective. Once the tests confirm that there is no adverse reaction to medications and the client’s health is stable, they are eligible to proceed with the surgery.',
+                img: '/cp/quy-trinh-phau-thuat/media/images/t2-img2.jpg',
+            },
+            {
+                title: 'Outlining, Measuring, and Marking',
+                text: 'To ensure the surgical results are harmonious and natural, Dr. Richard Huy outlines and marks the areas for aesthetic intervention. Next, precise measurements are meticulously taken to guarantee accuracy. Finally, the areas requiring surgery are marked precisely with specialized pens, facilitating a safe and effective surgical process.',
+                img: '/cp/quy-trinh-phau-thuat/media/images/t2-img3.jpg',
+            },
+            {
+                title: 'Performing the Surgery',
+                text: 'To ensure the surgery is safe and effective, the doctor will select an appropriate method of anesthesia or sedation for each case. This helps clients feel comfortable and relaxed throughout the procedure. Dr. Richard Huy performs the surgery in a sterile, closed environment. The technology and surgical instruments must be safe. The surgical team works in harmony under Dr. Richard Huy’s guidance.',
+                img: '/cp/quy-trinh-phau-thuat/media/images/t2-img4.jpg',
+            },
+            {
+                title: 'Post-Operative Care',
+                text: 'After each surgery, depending on its complexity, clients receive special monitoring and care at the hospital for about 24 to 48 hours. Dr. Richard Huy and the experienced medical team will assist clients in recovering quickly and minimizing pain.',
+                img: '/cp/quy-trinh-phau-thuat/media/images/t2-img5.jpg',
+            },
+        ];
+
+        // Xử lý sự kiện click
+        document.querySelectorAll('.screen2__step').forEach(step => {
+            step.addEventListener('click', function () {
+                const index = this.getAttribute('data-index');
+
+                // Cập nhật nội dung
+                document.getElementById('screen2__title').innerText = data[index].title;
+                document.getElementById('screen2__text').innerText = data[index].text;
+                document.getElementById('screen2__pic').querySelector('img').src = data[index].img;
+
+                // Cập nhật class active
+                document.querySelectorAll('.screen2__step').forEach(s => s.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
+
+</html>
