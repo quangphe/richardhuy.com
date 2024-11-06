@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breast Augmentation</title>
     <link rel="stylesheet" href="https://richardhuy.com/css/lib/lib.min.css">
-    <link rel="stylesheet" href="media/sass/main.min.css">
+    <link rel="stylesheet" href="media/sass/main.min.css?ver=1">
 </head>
 
 <body>
@@ -20,7 +20,10 @@
                     </picture>
                 </div>
                 <div class="screen1__text">
-                    Dr. Richard Huy is one of the leading experts in breast aesthetics in Vietnam, with over 20 years of experience in plastic surgery. Dr. Richard Huy and the expert team at Kangnam Aesthetic Hospital have researched and developed the "Light as Air" breast augmentation technique, providing clients with a full, attractive bust and the Y-Line cleavage.
+                    Dr. Richard Huy is one of the leading experts in breast aesthetics in Vietnam, with over 20 years of
+                    experience in plastic surgery. Dr. Richard Huy and the expert team at Kangnam Aesthetic Hospital
+                    have researched and developed the "Light as Air" breast augmentation technique, providing clients
+                    with a full, attractive bust and the Y-Line cleavage.
                 </div>
                 <div class="screen1__boxBtn">
                     <a href="#" class="screen1__regist dltv">
@@ -59,7 +62,9 @@
                             Preview Surgical Results
                         </div>
                         <div class="screen5__desc">
-                            Using Vectra 3D technology to simulate before-and-after results through 3D images. From there, recommendations are made regarding implant size and breast shape that best suit each customer's body
+                            Using Vectra 3D technology to simulate before-and-after results through 3D images. From
+                            there, recommendations are made regarding implant size and breast shape that best suit each
+                            customer's body
                         </div>
                     </div>
                 </div>
@@ -72,7 +77,8 @@
                             Awake During Surgery
                         </div>
                         <div class="screen5__desc">
-                            A special anesthetic method is applied, eliminating any pain. Customers can comfortably chat during the surgery and even go home the same day
+                            A special anesthetic method is applied, eliminating any pain. Customers can comfortably chat
+                            during the surgery and even go home the same day
                         </div>
                     </div>
                 </div>
@@ -85,7 +91,9 @@
                             No Pain - No Scars
                         </div>
                         <div class="screen5__desc">
-                            The Dry Pocket endoscopic technique allows for precise dissection of each millimeter of the breast pocket without invasion. Additionally, the doctor uses a Keller Funnel to speed up the implant insertion process (15 seconds per implant), without damaging nerves or tissue
+                            The Dry Pocket endoscopic technique allows for precise dissection of each millimeter of the
+                            breast pocket without invasion. Additionally, the doctor uses a Keller Funnel to speed up
+                            the implant insertion process (15 seconds per implant), without damaging nerves or tissue
                         </div>
                     </div>
                 </div>
@@ -98,7 +106,8 @@
                             Premium, Authentic Implants
                         </div>
                         <div class="screen5__desc">
-                            Premium implants, imported from trusted manufacturers, ensuring compatibility with the body and long-lasting durability: Nano Motiva Implants, Mentor Implants, Mentor Xtra, etc
+                            Premium implants, imported from trusted manufacturers, ensuring compatibility with the body
+                            and long-lasting durability: Nano Motiva Implants, Mentor Implants, Mentor Xtra, etc
                         </div>
                     </div>
                 </div>
@@ -117,26 +126,33 @@
     </section>
 
     <section class="screen4 load">
+        <div id="modal"></div>
         <div class="screen4__slideCustomer fadeInUp load">
             <div class="screen4__preWrapper">
                 <div class="screen4__wrapper">
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/nangnguc-p5.webp">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/nangnguc-p5.jpg"
+                            onclick="popupPhoto(dataSlide1, 0)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/nguc-1.jpg">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/nguc-1.jpg?ver=1"
+                            onclick="popupPhoto(dataSlide1, 1)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/nguc-2.jpg">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/nguc-2.jpg?ver=1"
+                            onclick="popupPhoto(dataSlide1, 2)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/nguc-3.jpg">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/nguc-3.jpg?ver=1"
+                            onclick="popupPhoto(dataSlide1, 3)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/nguc-5.jpg">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/nguc-5.jpg?ver=1"
+                            onclick="popupPhoto(dataSlide1, 4)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/nguc-6.jpg">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/nguc-6.jpg?ver=1"
+                            onclick="popupPhoto(dataSlide1, 5)">
                     </a>
                 </div>
             </div>
@@ -144,8 +160,130 @@
     </section>
 </body>
 
-<script src="https://richardhuy.com/css/landing/option.min.js?v14"></script>
-<script src="https://richardhuy.com/css/lib/js_v2.min.js?v1"></script>
-<script src="media/js/main.js"></script>
+<script src="https://richardhuy.com/en/css/landing/option.min.js?v14"></script>
+<script src="https://richardhuy.com/en/css/lib/js_v2.min.js?v1"></script>
+<script src="https://richardhuy.com/en/css/lib/lib.min.js"></script>
+
+<script>
+    // Slider Screen4 
+    let url = ''
+    const dataSlide1 = [
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/tham-my-mui/media/images/nangnguc-p5.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/tham-my-mui/media/images/nguc-1.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/tham-my-mui/media/images/nguc-2.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/tham-my-mui/media/images/nguc-3.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/tham-my-mui/media/images/nguc-5.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/tham-my-mui/media/images/nguc-6.jpg`
+        },
+    ];
+    const modalPop = (link) => {
+        return `
+      <div class="modal" id="modal-pic" style="display:flex">
+          <div class="modal-closePic">×</div>
+          <div class="modal-bg"></div>
+          <div class="modal-box modal-box-img animate-zoom">
+              <div class="modal-pic" style="text-align:center">
+                    <div class="slider"></div>
+                <div class="slider__control">
+                    <button class="slider__arrow slider__arrow--prev">❮</button>
+                    <button class="slider__arrow slider__arrow--next">❯</button>
+                </div>
+              </div>
+          </div>
+      </div>
+    `;
+    };
+
+    function popupPhoto(data, index) {
+        document.querySelector('#modal').innerHTML = modalPop();
+        createSlider(data, index);
+        document.querySelector('.modal-closePic').addEventListener('click', () => {
+            document.querySelector('#modal').innerHTML = '';
+        });
+        document.querySelector('.modal-bg').addEventListener('click', () => {
+            document.querySelector('#modal').innerHTML = '';
+        });
+    }
+
+
+    // compoinent slide
+    const slideCard = (data) => {
+        return `
+        <div class="slider__item ">
+            <img class="slider__image" src="${data.image}" alt="">
+        </div>
+    `;
+    };
+
+
+    function createSlider(data, index) {
+        for (let i = 0; i < data.length; i++) {
+            let slider = document.querySelector('.slider');
+            if (i < 2) {
+                slider.innerHTML += slideCard(data[index]);
+            }
+            if (index == data.length - 1) {
+                index = 0;
+            } else {
+                index++;
+            }
+        }
+
+        const btnNext = document.getElementsByClassName('slider__arrow--next');
+        const btnPrev = document.getElementsByClassName('slider__arrow--prev');
+        const img = document.getElementsByClassName('slider__image');
+        const text = document.getElementsByClassName('slider__text');
+        let i = 0;
+        btnNext[0].addEventListener("click", function () {
+            plusDivs(1);
+            i++;
+            for (let x = 0; x < img.length; x++) {
+                if (i >= data.length) {
+                    i = 0;
+                }
+                img[x].setAttribute('src', data[i].image);
+            }
+
+        });
+        btnPrev[0].addEventListener('click', function () {
+            plusDivs(-1);
+            i--;
+            for (let x = 0; x < img.length; x++) {
+                if (i <= -1) {
+                    i = data.length - 1;
+                }
+                img[x].setAttribute('src', data[i].image);
+            }
+        })
+        let slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            let i;
+            let x = document.getElementsByClassName("slider__item");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    }
+</script>
 
 </html>

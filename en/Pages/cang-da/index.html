@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facelift Service</title>
     <link rel="stylesheet" href="https://richardhuy.com/css/lib/lib.min.css">
-    <link rel="stylesheet" href="media/sass/main.min.css">
+    <link rel="stylesheet" href="media/sass/main.min.css?ver=1">
 </head>
 
 <body>
@@ -20,7 +20,11 @@
                     </picture>
                 </div>
                 <div class="screen1__text">
-                    Dr. Richard Huy's facelift service is the perfect solution to restore skin's youthful and smooth appearance. With over 20 years of experience in cosmetic surgery, Dr. Richard Huy applies the most advanced techniques to ensure outstanding effectiveness and absolute safety for clients. The skin tightening procedure is meticulously performed to erase wrinkles, naturally lift facial muscles, and bring a youthful and radiant beauty.
+                    Dr. Richard Huy's facelift service is the perfect solution to restore skin's youthful and smooth
+                    appearance. With over 20 years of experience in cosmetic surgery, Dr. Richard Huy applies the most
+                    advanced techniques to ensure outstanding effectiveness and absolute safety for clients. The skin
+                    tightening procedure is meticulously performed to erase wrinkles, naturally lift facial muscles, and
+                    bring a youthful and radiant beauty.
                 </div>
                 <div class="screen1__boxBtn">
                     <a href="#" class="screen1__regist dltv">
@@ -95,26 +99,33 @@
     </section>
 
     <section class="screen4 load">
+        <div id="modal"></div>
         <div class="screen4__slideCustomer fadeInUp load">
             <div class="screen4__preWrapper">
                 <div class="screen4__wrapper">
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/trehoa-p1.webp">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/trehoa-p1.jpg"
+                            onclick="popupPhoto(dataSlide1, 0)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/trehoa-p3.webp">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/trehoa-p3.jpg"
+                            onclick="popupPhoto(dataSlide1, 1)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/trehoa-p5.webp">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/trehoa-p5.jpg"
+                            onclick="popupPhoto(dataSlide1, 2)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/trehoa-p6.webp">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/trehoa-p6.jpg"
+                            onclick="popupPhoto(dataSlide1, 3)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/trehoa-p7.webp">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/trehoa-p7.jpg"
+                            onclick="popupPhoto(dataSlide1, 4)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/trehoa-p8.webp">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/trehoa-p8.jpg"
+                            onclick="popupPhoto(dataSlide1, 5)">
                     </a>
                 </div>
             </div>
@@ -122,7 +133,130 @@
     </section>
 </body>
 
-<script src="https://richardhuy.com/css/landing/option.min.js?v14"></script>
-<script src="https://richardhuy.com/css/lib/js_v2.min.js?v1"></script>
+<script src="https://richardhuy.com/en/css/landing/option.min.js?v14"></script>
+<script src="https://richardhuy.com/en/css/lib/js_v2.min.js?v1"></script>
+<script src="https://richardhuy.com/en/css/lib/lib.min.js"></script>
+
+<script>
+    // Slider Screen4 
+    let url = ''
+    const dataSlide1 = [
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/cang-da/media/images/trehoa-p1.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/cang-da/media/images/trehoa-p2.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/cang-da/media/images/trehoa-p3.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/cang-da/media/images/trehoa-p4.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/cang-da/media/images/trehoa-p5.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/cang-da/media/images/trehoa-p6.jpg`
+        },
+    ];
+    const modalPop = (link) => {
+        return `
+      <div class="modal" id="modal-pic" style="display:flex">
+          <div class="modal-closePic">×</div>
+          <div class="modal-bg"></div>
+          <div class="modal-box modal-box-img animate-zoom">
+              <div class="modal-pic" style="text-align:center">
+                    <div class="slider"></div>
+                <div class="slider__control">
+                    <button class="slider__arrow slider__arrow--prev">❮</button>
+                    <button class="slider__arrow slider__arrow--next">❯</button>
+                </div>
+              </div>
+          </div>
+      </div>
+    `;
+    };
+
+    function popupPhoto(data, index) {
+        document.querySelector('#modal').innerHTML = modalPop();
+        createSlider(data, index);
+        document.querySelector('.modal-closePic').addEventListener('click', () => {
+            document.querySelector('#modal').innerHTML = '';
+        });
+        document.querySelector('.modal-bg').addEventListener('click', () => {
+            document.querySelector('#modal').innerHTML = '';
+        });
+    }
+
+
+    // compoinent slide
+    const slideCard = (data) => {
+        return `
+        <div class="slider__item ">
+            <img class="slider__image" src="${data.image}" alt="">
+        </div>
+    `;
+    };
+
+
+    function createSlider(data, index) {
+        for (let i = 0; i < data.length; i++) {
+            let slider = document.querySelector('.slider');
+            if (i < 2) {
+                slider.innerHTML += slideCard(data[index]);
+            }
+            if (index == data.length - 1) {
+                index = 0;
+            } else {
+                index++;
+            }
+        }
+
+        const btnNext = document.getElementsByClassName('slider__arrow--next');
+        const btnPrev = document.getElementsByClassName('slider__arrow--prev');
+        const img = document.getElementsByClassName('slider__image');
+        const text = document.getElementsByClassName('slider__text');
+        let i = 0;
+        btnNext[0].addEventListener("click", function () {
+            plusDivs(1);
+            i++;
+            for (let x = 0; x < img.length; x++) {
+                if (i >= data.length) {
+                    i = 0;
+                }
+                img[x].setAttribute('src', data[i].image);
+            }
+
+        });
+        btnPrev[0].addEventListener('click', function () {
+            plusDivs(-1);
+            i--;
+            for (let x = 0; x < img.length; x++) {
+                if (i <= -1) {
+                    i = data.length - 1;
+                }
+                img[x].setAttribute('src', data[i].image);
+            }
+        })
+        let slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            let i;
+            let x = document.getElementsByClassName("slider__item");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    }
+</script>
 
 </html>
