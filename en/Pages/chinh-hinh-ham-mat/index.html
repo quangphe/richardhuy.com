@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaw and Facial Contouring</title>
     <link rel="stylesheet" href="https://richardhuy.com/css/lib/lib.min.css">
-    <link rel="stylesheet" href="media/sass/main.min.css">
+    <link rel="stylesheet" href="media/sass/main.min.css?ver=1">
 </head>
 
 <body>
@@ -20,7 +20,13 @@
                     </picture>
                 </div>
                 <div class="screen1__text">
-                    Dr. Richard Huy is a rare expert capable of handling complex and challenging maxillofacial cases that require high expertise. As the lead of the "Transformation Journey" team, he has guided the team to continually innovate and apply the latest technologies to achieve optimal aesthetic outcomes, helping clients enhance their appearance and regain confidence. Dr. Richard Huy's maxillofacial surgery services go beyond merely improving appearance; they focus on safety and customer satisfaction. This dedication has established Richard Huy's reputation and earned the trust of numerous clients both domestically and internationally.
+                    Dr. Richard Huy is a rare expert capable of handling complex and challenging maxillofacial cases
+                    that require high expertise. As the lead of the "Transformation Journey" team, he has guided the
+                    team to continually innovate and apply the latest technologies to achieve optimal aesthetic
+                    outcomes, helping clients enhance their appearance and regain confidence. Dr. Richard Huy's
+                    maxillofacial surgery services go beyond merely improving appearance; they focus on safety and
+                    customer satisfaction. This dedication has established Richard Huy's reputation and earned the trust
+                    of numerous clients both domestically and internationally.
                 </div>
                 <div class="screen1__boxBtn">
                     <a href="#" class="screen1__regist dltv">
@@ -101,7 +107,8 @@
                             Surgical planning with 3D simulation
                         </div>
                         <div class="screen5__desc">
-                            Using proprietary AI Face Design and CT Scanner technology to create precise surgical plans and shorten operation time, achieving desired maxillofacial correction results.
+                            Using proprietary AI Face Design and CT Scanner technology to create precise surgical plans
+                            and shorten operation time, achieving desired maxillofacial correction results.
                         </div>
                     </div>
                 </div>
@@ -111,10 +118,10 @@
                     </div>
                     <div class="screen5__text">
                         <div class="screen5__title">
-                            Systematic surgical process  
+                            Systematic surgical process
                         </div>
                         <div class="screen5__desc">
-                            <p>1. Examination and diagnosis of the patient's condition  </p>
+                            <p>1. Examination and diagnosis of the patient's condition </p>
                             <p>2. Impressions, X-ray imaging</p>
                             <p>3. Occlusal scan, 3D CT imaging to create a 3D model</p>
                             <p>4. Research and plan surgery using AI FACE Design technology</p>
@@ -133,7 +140,8 @@
                             Safety assurance
                         </div>
                         <div class="screen5__desc">
-                            Maxillofacial surgery is performed in a sterile operating room, ensuring to strict standards set by the Ministry of Health, ensuring the safety of all clients.
+                            Maxillofacial surgery is performed in a sterile operating room, ensuring to strict standards
+                            set by the Ministry of Health, ensuring the safety of all clients.
                         </div>
                     </div>
                 </div>
@@ -152,26 +160,33 @@
     </section>
 
     <section class="screen4 load">
+        <div id="modal"></div>
         <div class="screen4__slideCustomer fadeInUp load">
             <div class="screen4__preWrapper">
                 <div class="screen4__wrapper">
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/hammat-1.jpg">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/hammat-1.jpg?ver=1"
+                            onclick="popupPhoto(dataSlide1, 0)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/hammat-2.jpg">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/hammat-2.jpg?ver=1"
+                            onclick="popupPhoto(dataSlide1, 1)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/hammat-3.jpg">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/hammat-3.jpg?ver=1"
+                            onclick="popupPhoto(dataSlide1, 2)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/hammat-6.jpg">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/hammat-6.jpg?ver=1"
+                            onclick="popupPhoto(dataSlide1, 3)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/hammat-7.jpg">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/hammat-7.jpg?ver=1"
+                            onclick="popupPhoto(dataSlide1, 4)">
                     </a>
-                    <a href="#" class="screen4__item">
-                        <img width="549" height="383" src="media/images/hammat-8.jpg">
+                    <a class="screen4__item">
+                        <img width="549" height="383" src="media/images/hammat-8.jpg?ver=1"
+                            onclick="popupPhoto(dataSlide1, 5)">
                     </a>
                 </div>
             </div>
@@ -179,8 +194,199 @@
     </section>
 </body>
 
-<script src="https://richardhuy.com/css/landing/option.min.js?v14"></script>
-<script src="https://richardhuy.com/css/lib/js_v2.min.js?v1"></script>
-<script src="media/js/main.js"></script>
+<script src="https://richardhuy.com/en/css/landing/option.min.js?v14"></script>
+<script src="https://richardhuy.com/en/css/lib/js_v2.min.js?v1"></script>
+<script src="https://richardhuy.com/en/css/lib/lib.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const box = document.querySelector('.screen3__box');
+        const items = document.querySelectorAll('.screen3__item');
+        const dotsContainer = document.createElement('div');
+        dotsContainer.classList.add('dots');
+        let currentIndex = 0;
+        let slideInterval;
+
+        // Tạo các dots
+        items.forEach((item, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        box.parentNode.appendChild(dotsContainer);
+
+        function updateDots() {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            const offset = -currentIndex * 100; // Tính offset
+            items.forEach(item => {
+                item.style.transform = `translateX(${offset}%)`;
+            });
+            updateDots();
+        }
+
+        function autoSlide() {
+            currentIndex = (currentIndex + 1) % items.length; // Chuyển đến slide tiếp theo
+            goToSlide(currentIndex);
+        }
+
+        function startAutoSlide() {
+            slideInterval = setInterval(autoSlide, 5000); // 5000 ms = 5 giây
+        }
+
+        function stopAutoSlide() {
+            clearInterval(slideInterval);
+        }
+
+        function checkWidth() {
+            if (window.innerWidth <= 430) {
+                goToSlide(0); // Reset về slide đầu tiên
+                updateDots();
+                startAutoSlide(); // Bắt đầu tự động chuyển slide
+            } else {
+                // Nếu lớn hơn 430px, hủy bỏ slide (hiển thị tất cả)
+                items.forEach(item => {
+                    item.style.transform = 'translateX(0)';
+                });
+                dotsContainer.style.display = 'none'; // Ẩn dots
+                stopAutoSlide(); // Dừng tự động chuyển slide
+            }
+        }
+
+        // Kiểm tra kích thước màn hình khi tải trang
+        checkWidth();
+
+        // Kiểm tra kích thước màn hình khi thay đổi kích thước
+        window.addEventListener('resize', checkWidth);
+    });
+
+    // Slider Screen4 
+    let url = ''
+    const dataSlide1 = [
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/cang-da/media/images/hammat-1.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/cang-da/media/images/hammat-2.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/cang-da/media/images/hammat-3.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/cang-da/media/images/hammat-6.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/cang-da/media/images/hammat-7.jpg`
+        },
+        {
+            "image": `https://richardhuy.com/en/cp/dich-vu/cang-da/media/images/hammat-8.jpg`
+        },
+    ];
+    const modalPop = (link) => {
+        return `
+      <div class="modal" id="modal-pic" style="display:flex">
+          <div class="modal-closePic">×</div>
+          <div class="modal-bg"></div>
+          <div class="modal-box modal-box-img animate-zoom">
+              <div class="modal-pic" style="text-align:center">
+                    <div class="slider"></div>
+                <div class="slider__control">
+                    <button class="slider__arrow slider__arrow--prev">❮</button>
+                    <button class="slider__arrow slider__arrow--next">❯</button>
+                </div>
+              </div>
+          </div>
+      </div>
+    `;
+    };
+
+    function popupPhoto(data, index) {
+        document.querySelector('#modal').innerHTML = modalPop();
+        createSlider(data, index);
+        document.querySelector('.modal-closePic').addEventListener('click', () => {
+            document.querySelector('#modal').innerHTML = '';
+        });
+        document.querySelector('.modal-bg').addEventListener('click', () => {
+            document.querySelector('#modal').innerHTML = '';
+        });
+    }
+
+
+    // compoinent slide
+    const slideCard = (data) => {
+        return `
+        <div class="slider__item ">
+            <img class="slider__image" src="${data.image}" alt="">
+        </div>
+    `;
+    };
+
+
+    function createSlider(data, index) {
+        for (let i = 0; i < data.length; i++) {
+            let slider = document.querySelector('.slider');
+            if (i < 2) {
+                slider.innerHTML += slideCard(data[index]);
+            }
+            if (index == data.length - 1) {
+                index = 0;
+            } else {
+                index++;
+            }
+        }
+
+        const btnNext = document.getElementsByClassName('slider__arrow--next');
+        const btnPrev = document.getElementsByClassName('slider__arrow--prev');
+        const img = document.getElementsByClassName('slider__image');
+        const text = document.getElementsByClassName('slider__text');
+        let i = 0;
+        btnNext[0].addEventListener("click", function () {
+            plusDivs(1);
+            i++;
+            for (let x = 0; x < img.length; x++) {
+                if (i >= data.length) {
+                    i = 0;
+                }
+                img[x].setAttribute('src', data[i].image);
+            }
+
+        });
+        btnPrev[0].addEventListener('click', function () {
+            plusDivs(-1);
+            i--;
+            for (let x = 0; x < img.length; x++) {
+                if (i <= -1) {
+                    i = data.length - 1;
+                }
+                img[x].setAttribute('src', data[i].image);
+            }
+        })
+        let slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            let i;
+            let x = document.getElementsByClassName("slider__item");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    }
+</script>
 
 </html>
